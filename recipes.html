@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Cooking Delight</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+</header>
+
+<section class="container">
+
+  <!-- Recipe Cards -->
+  <div id="recipeContainer" class="recipes">
+
+    <div class="card">
+      <img src="images/spaghetti.jpg">
+      <h3>Spaghetti Bolognese</h3>
+      <button onclick="viewRecipe('Spaghetti Bolognese','spaghetti.jpg','Classic Italian pasta with meat sauce.')">View</button>
+      <button onclick="removeRecipe(this)" class="danger">Remove</button>
+    </div>
+
+    <div class="card">
+      <img src="images/chicken_curry.jpg">
+      <h3>Chicken Curry</h3>
+      <button onclick="viewRecipe('Chicken Curry','chicken_curry.jpg','Spicy and flavorful chicken curry.')">View</button>
+      <button onclick="removeRecipe(this)" class="danger">Remove</button>
+    </div>
+
+    <div class="card">
+      <img src="images/chocolate_cake.jpg">
+      <h3>Chocolate Cake</h3>
+      <button onclick="viewRecipe('Chocolate Cake','chocolate_cake.jpg','Soft and moist chocolate cake.')">View</button>
+      <button onclick="removeRecipe(this)" class="danger">Remove</button>
+    </div>
+
+  </div>
+
+  <!-- Upload Box -->
+  <div class="upload-box">
+    <h2>Upload Recipe</h2>
+    <form onsubmit="uploadRecipe(event)">
+      <input type="text" id="title" placeholder="Recipe Name" required>
+      <input type="text" id="image" placeholder="Image file name (dish.jpg)" required>
+      <input type="text" id="desc" placeholder="Short description" required>
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Cooking Delight</p>
+</footer>
+
+</body>
+</html>

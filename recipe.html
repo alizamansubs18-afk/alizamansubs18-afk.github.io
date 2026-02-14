@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipe Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Cooking Delight</h1>
+  <nav>
+    <a href="recipes.html">← Back to Recipes</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+</header>
+
+<section class="recipe-detail">
+  <img id="recipeImage">
+  <h2 id="recipeTitle"></h2>
+  <p id="recipeDesc"></p>
+</section>
+
+<script>
+  document.getElementById("recipeTitle").innerText = localStorage.getItem("title");
+  document.getElementById("recipeDesc").innerText = localStorage.getItem("desc");
+  document.getElementById("recipeImage").src = "images/" + localStorage.getItem("image");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f4f4f4;
+}
+
+header{
+  background:#333;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+nav a{
+  color:white;
+  margin:10px;
+  text-decoration:none;
+}
+
+.hero{
+  text-align:center;
+  padding:60px;
+  animation:fade 1s ease-in;
+}
+
+.btn{
+  padding:10px 20px;
+  background:#ff5722;
+  color:white;
+  text-decoration:none;
+  border-radius:5px;
+}
+
+.container{
+  display:flex;
+  gap:30px;
+  padding:30px;
+}
+
+.recipes{
+  flex:3;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:5px;
+}
+
+button{
+  margin:5px;
+  padding:8px 12px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  background:#ff5722;
+  color:white;
+}
+
+.danger{
+  background:#e53935;
+}
+
+.upload-box{
+  flex:1;
+  background:white;
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+input{
+  width:100%;
+  padding:8px;
+  margin-bottom:10px;
+}
+
+.recipe-detail{
+  text-align:center;
+  padding:40px;
+  animation:fade 0.8s ease-in;
+}
+
+.recipe-detail img{
+  width:300px;
+  border-radius:10px;
+}
+
+footer{
+  text-align:center;
+  padding:15px;
+  background:#333;
+  color:white;
+  margin-top:40px;
+}
+
+@keyframes fade{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@media(max-width:900px){
+  .container{
+    flex-direction:column;
+  }
+}
+
+.contact-section{
+  text-align:center;
+  padding:50px;
+  animation:fade 0.8s ease-in;
+}
+
+.contact-form{
+  max-width:400px;
+  margin:20px auto;
+  display:flex;
+  flex-direction:column;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding:10px;
+  margin-bottom:15px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+.contact-form textarea{
+  height:120px;
+  resize:none;
+}
+
+.success-message{
+  margin-top:15px;
+  color:green;
+  font-weight:bold;
+}

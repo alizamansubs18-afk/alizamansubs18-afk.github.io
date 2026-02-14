@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us - Cooking Delight</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Cooking Delight</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <h2>Contact Us</h2>
+  <p>If you have any questions, suggestions, or recipe ideas, feel free to contact us!</p>
+
+  <form class="contact-form" onsubmit="submitContact(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div id="messageSuccess" class="success-message"></div>
+</section>
+
+<footer>
+  <p>© 2026 Cooking Delight</p>
+</footer>
+
+<script>
+function submitContact(e){
+  e.preventDefault();
+  document.getElementById("messageSuccess").innerHTML = 
+    "✅ Thank you! Your message has been sent successfully.";
+}
+</script>
+
+</body>
+</html>
